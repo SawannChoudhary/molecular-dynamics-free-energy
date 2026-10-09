@@ -1,0 +1,16 @@
+MOLINFO STRUCTURE=dialaA.pdb
+
+phi: TORSION ATOMS=@phi-2
+psi: TORSION ATOMS=@psi-2
+
+rg: GYRATION TYPE=RADIUS ATOMS=@mdatoms
+
+metad: METAD ARG=rg ...
+  PACE=500
+  HEIGHT=1.2
+  BIASFACTOR=8
+  SIGMA=0.05
+  FILE=HILLS
+...
+
+PRINT ARG=phi,psi,rg,metad.bias FILE=COLVAR STRIDE=10

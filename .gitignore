@@ -1,0 +1,33 @@
+# GROMACS simulation files
+*.xtc
+*.trr
+*.tpr
+*.edr
+*.cpt
+*.log
+*.gro
+
+# PLUMED runtime/output files
+COLVAR
+HILLS
+COLVAR_*
+HILLS_*
+*.weights
+
+# Temporary and backup files
+#*
+.*#
+*.bak
+*.tmp
+
+# Python
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
